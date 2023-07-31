@@ -12,6 +12,7 @@ public class Customer extends Person {
         this.address = address;
     }
 
+
     public Customer() {
     }
 
@@ -37,5 +38,9 @@ public class Customer extends Person {
                 "typeCustomer='" + typeCustomer + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    public String customerGetInformationToCSV(){
+        return this.getId()+","+this.getName()+","+this.getDateOfBirth()+","+this.getGender()+","+this.getIdentityCard()+","+this.getPhoneNumber()+","+this.getEmail()+","+this.getTypeCustomer()+","+this.getAddress();
     }
 }

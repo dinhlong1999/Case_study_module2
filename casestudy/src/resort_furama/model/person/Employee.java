@@ -1,8 +1,9 @@
 package resort_furama.model.person;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Employee  extends Person{
+public class Employee  extends Person  {
 
     private String level;
     private String position;

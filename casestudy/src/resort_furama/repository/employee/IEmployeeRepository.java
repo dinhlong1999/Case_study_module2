@@ -11,4 +11,7 @@ public interface IEmployeeRepository {
     void deleteEmployee(int id);
     List<Employee> searchEmployee(String name);
     int searchIndex(String index);
-}
+    boolean searchValueLevel(String level);
+    boolean searchValuePosition(String position);
+    }
+

@@ -1,12 +1,12 @@
 package resort_furama.model.facilities;
 
-public class Villa extends facilities {
+public class Villa extends Facility {
     private String roomStandard;
     private double poolArea;
     private int floor;
 
 
-    public Villa(int id, String name, Double usableArea, int rentalCosts, int maxPeople, String typeRental, String roomStandard, double poolArea, int floor) {
+    public Villa(String id, String name, Double usableArea, int rentalCosts, int maxPeople, String typeRental, String roomStandard, double poolArea, int floor) {
         super(id, name, usableArea, rentalCosts, maxPeople, typeRental);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
@@ -39,10 +39,7 @@ public class Villa extends facilities {
 
     @Override
     public String toString() {
-        return "Villa{" +
-                "roomStandard='" + roomStandard + '\'' +
-                ", poolArea=" + poolArea +
-                ", floor=" + floor +
-                '}';
+        return "Villa : " +super.toString() + " roomStandard = " +  roomStandard + " , "
+               + " poolArea = " + poolArea +" , " + "floor = "+ floor;
     }
 }

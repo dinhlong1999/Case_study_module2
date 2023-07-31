@@ -1,12 +1,19 @@
 package resort_furama.controller;
 
+import resort_furama.service.customer.CustomerService;
+import resort_furama.service.customer.ICustomerService;
 import resort_furama.service.employee.EmployeeService;
 import resort_furama.service.employee.IEmployeeService;
+import resort_furama.service.facility.FacilityService;
+import resort_furama.service.facility.IFacilityService;
 
 import java.util.Scanner;
 
 public class FuramaController {
     private static IEmployeeService employeeService = new EmployeeService();
+    private static ICustomerService customerService = new CustomerService();
+
+    private static IFacilityService facilityService = new FacilityService();
 
     public static void displayMenu() {
 
@@ -100,7 +107,23 @@ public class FuramaController {
                 System.out.println("6. Return main menu");
                 choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
-
+                    case 1:
+                        customerService.displayListCustomer();
+                        break;
+                    case 2:
+                        customerService.addNewCustomer();
+                        break;
+                    case 3:
+                        customerService.editCustomer();
+                        break;
+                    case 4:
+                        customerService.deleteCustomer();
+                        break;
+                    case 5:
+                        customerService.searchByNameCustomer();
+                        break;
+                    case 6:
+                        displayMenu();
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Please enter a number key");
@@ -123,6 +146,14 @@ public class FuramaController {
                 System.out.println("5  Return main menu");
                 choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
+                    case 1:
+                        facilityService.displayFacility();
+                        break;
+                    case 2:
+
+                    case 3:
+                        facilityService.displayListMaintenance();
+                        break;
 
                 }
             } catch (NumberFormatException e) {

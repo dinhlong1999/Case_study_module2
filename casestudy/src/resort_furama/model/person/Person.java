@@ -3,8 +3,7 @@ package resort_furama.model.person;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public abstract class Person implements Serializable {
-    private static final long serialVersionUID = 7710L;
+public abstract class Person  {
     private String id;
     private String name;
     private LocalDate DateOfBirth;

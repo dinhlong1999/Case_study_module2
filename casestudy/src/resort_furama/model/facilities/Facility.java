@@ -1,14 +1,14 @@
 package resort_furama.model.facilities;
 
-public abstract class facilities {
-    private int id;
+public abstract class Facility {
+    private String id;
     private String name;
     private Double usableArea;
     private int rentalCosts;
     private int maxPeople;
     private String typeRental;
 
-     public facilities(int id, String name, Double usableArea, int rentalCosts, int maxPeople, String typeRental) {
+     public Facility(String id, String name, Double usableArea, int rentalCosts, int maxPeople, String typeRental) {
           this.id = id;
           this.name = name;
           this.usableArea = usableArea;
@@ -17,11 +17,14 @@ public abstract class facilities {
           this.typeRental = typeRental;
      }
 
-    public int getId() {
+    public Facility() {
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -67,13 +70,13 @@ public abstract class facilities {
 
     @Override
     public String toString() {
-        return "FuramaResort{" +
+        return
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", usableArea=" + usableArea +
-                ", rentalCosts=" + rentalCosts +
-                ", maxPeople=" + maxPeople +
-                ", typeRental='" + typeRental + '\'' +
-                '}';
+                ", usableArea =" + usableArea +
+                ", rentalCosts =" + rentalCosts +
+                ", maxPeople = " + maxPeople +
+                ", typeRental= " + typeRental ;
+
     }
 }
