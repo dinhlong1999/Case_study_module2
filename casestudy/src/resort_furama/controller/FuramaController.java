@@ -150,10 +150,15 @@ public class FuramaController {
                         facilityService.displayFacility();
                         break;
                     case 2:
-
+                        facilityService.addFacility();
                     case 3:
                         facilityService.displayListMaintenance();
                         break;
+                    case 4:
+                        facilityService.deleteFacility();
+                        break;
+                    case 5:
+                        displayMenu();
 
                 }
             } catch (NumberFormatException e) {
@@ -161,6 +166,7 @@ public class FuramaController {
             }
         } while (true);
     }
+
 
     public static void bookingManagement() {
         Scanner scanner = new Scanner(System.in);

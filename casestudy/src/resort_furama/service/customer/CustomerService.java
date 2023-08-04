@@ -33,7 +33,7 @@ public class CustomerService implements ICustomerService {
         while (true) {
             try {
                 do {
-                    System.out.println("String displayID = \"Please enter ID customer (TRUE: KH-XXXX), IN THERE: X(0-9)\";");
+                    System.out.println("Please enter ID customer (TRUE: KH-XXXX), IN THERE: X(0-9)");
                     id = scanner.nextLine();
                     if (!Regex.checkIdCustomer(id)) {
                         System.err.println(TypeError.ERROR_ID_CUSTOMER);

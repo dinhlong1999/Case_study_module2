@@ -225,25 +225,37 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void deleteEmployee() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a id to delete");
-        String idDelete = scanner.nextLine();
-        if (repository.searchIndex(idDelete) == -1) {
-            System.out.println("No search employee");
-        } else {
-            repository.deleteEmployee(repository.searchIndex(idDelete));
-            System.out.println("Deleted success");
+            try {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Enter a id to delete");
+                String idDelete = scanner.nextLine();
+                if (repository.searchIndex(idDelete) == -1) {
+                    System.out.println("No search employee");
+                } else {
+                    repository.deleteEmployee(repository.searchIndex(idDelete));
+                    System.out.println("Deleted success");
+
+                }
+            }catch (NumberFormatException e){
+                System.err.println("FORMAT NO VALID, PLEASE ENTER AGAIN");
+            }
         }
-    }
+
+
 
     @Override
     public void searchByName() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a name to search");
-        String nameSearch = scanner.nextLine();
-        List<Employee> employeeList = repository.searchEmployee(nameSearch);
-        for (Employee employee : employeeList) {
-            System.out.println(employee);
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter a name to search");
+            String nameSearch = scanner.nextLine();
+            List<Employee> employeeList = repository.searchEmployee(nameSearch);
+            for (Employee employee : employeeList) {
+                System.out.println(employee);
+            }
+        }catch (NumberFormatException e){
+            System.err.println("FORMAT NO VALID, PLEASE ENTER AGAIN");
         }
+
     }
 }

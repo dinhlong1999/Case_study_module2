@@ -16,4 +16,8 @@ public interface IFacilityRepository {
 
     void deleteFacility(Facility facility);
 
+    boolean checkFacility(Facility facility);
+    Facility getById(String id);
+
+
 }
