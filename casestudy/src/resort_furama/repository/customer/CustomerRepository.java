@@ -20,7 +20,8 @@ public class CustomerRepository implements ICustomerRepository {
         Customer customer;
         for (String string: stringList ) {
             temp = string.split(",");
-            customer = new Customer(temp[0],temp[1],LocalDate.parse(temp[2]),temp[3],temp[4],temp[5],temp[6],temp[7],temp[8]);
+            customer = new Customer(temp[0],temp[1],LocalDate.parse(temp[2]),
+                    temp[3],temp[4],temp[5],temp[6],temp[7],temp[8]);
             customers.add(customer);
         }
         return customers;
